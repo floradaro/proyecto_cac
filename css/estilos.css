@@ -48,16 +48,16 @@ header,footer{
 
 .footer{
     display: flex;
-    place-items: center;
-    color:va(--secondary-color);
+    place-items: center; /*centra la flecha*/
+    color:var(--secondary-color);
     height: 110px;
-    justify-content: center;
-    text-align: center;
+    text-align: center; /*centraria cada contenedor verticalmente*/
     background-color: var(--secondary-color);
     
     a{
         color: var(--third-color);
         text-decoration: none;
+        margin-right: 10px;
     }
     a:hover{
         color: white;
@@ -97,7 +97,7 @@ header,footer{
 }
 .sectionTitulos{
     height: 85vh;
-    background:linear-gradient(to bottom, #000000a3, #00000073),url("./assets/img/fondo.jpg");
+    background:linear-gradient(to bottom, #000000a3, #00000073),url("../assets/img/fondo.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
