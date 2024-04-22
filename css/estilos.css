@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root{
+    --main-color: #f3f3f3;
+    --secondary-color: #9296F0;
+    --third-color: #000000;
+    --third-color-t: #9296f9;
+}
+
+body{
+    background-color: var(--third-color);
+    color: var(--main-color);
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+header,footer{
+    background-color: var(--third-color);
+    color: var(--main-color);
+    padding: 20px;
+    row-gap: 15px;
+    flex-flow:wrap;
+    min-height: 70px;
+    
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        height: 50px;
+        margin-right: 10px; 
+    }  
+    
+}
+
+.footer{
+    display: flex;
+    place-items: center;
+    color:va(--secondary-color);
+    height: 110px;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--secondary-color);
+    
+    a{
+        color: var(--third-color);
+        text-decoration: none;
+    }
+    a:hover{
+        color: white;
+    }
+    div{
+        margin-left: auto;
+    }
+
+
+}
+.header{
+    height: 15vh;
+    position:sticky;
+    top:0; 
+    z-index: 10; 
+    nav{
+        height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-size:1.6rem;
+        }
+        ul{
+            list-style: none;
+            display:flex;
+            column-gap: 20px;
+            a{
+                font-size:1.4rem;
+            }
+           
+        }
+        .nav-link:hover{color: var(--main-color);}
+    }
+}
+.sectionTitulos{
+    height: 85vh;
+    background:linear-gradient(to bottom, #000000a3, #00000073),url("../img/fondo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    .contenedorTitulos{
+        text-align: center;
+        width: 60%;
+        margin:0 auto;
+        border-radius: 5px;
+        a{
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color:var(--main-color);
+            font-size: 2rem;
+            border:2px solid var(--main-color);
+            border-radius: 5px;
+            padding:10px 20px;
+        }
+        a:hover {
+            
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+            
+        }
+       
+
+/* Estilo del botón al pasar el mouse */
+
+    }
+}
+
+.busqueda{
+    background-image: linear-gradient(to top, #000000, #9296f0);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    opacity: 0; /* Inicialmente ocultar los contenedores */
+    transition: opacity 0.5s ease-in-out;
+    
+    form {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      input[type="text"] {
+        padding: 8px;
+        margin: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 50%;
+      }
+      
+      .button {
+        padding: 8px 12px;
+        background-color:#9296f9;
+        color:var(--third-color);
+        border:2px solid var(--secondary-color);
+        border-radius: 4px;
+        margin-left: 8px;
+        cursor: pointer;
+        
+      }
+      .button:hover {
+        color:white;
+      }
+}
+
+.busqueda:nth-child(2) {
+    animation: fadeIn 0.5s ease-in-out forwards 1s;
+}
+.peliculasTendencias{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:30px;
+    }
+    .galeriaTendencias{
+        display:flex;
+        justify-content: space-evenly;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        div{
+            width: 250px;
+            height: 350px;
+            box-shadow: 10px 10px 47px -6px rgba(255, 255, 255, 0.267);
+            border-radius: 5px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+
+                /*animacion*/
+                flex-grow: 1;
+                opacity: 0.8;
+                transition: opacity 0.5s ease, transform 0.3s ease;
+                transform-origin: center;
+                
+
+            }
+           img:hover{
+            width: 105%; /* Aumenta ligeramente el tamaño de la imagen */
+            opacity: 1; /* Aumenta la opacidad */
+            transform: scale(1.07) translate(-3%, -3%);
+                }
+        }
+    }
+    button{
+       margin-bottom:20px;
+    }
+}
+
+/*media query*/
+
+@media screen and (max-width: 768px){
+    .galeria{
+        flex-wrap: wrap;
+    }
+    .galeria .wanda{
+        flex-grow:4;
+    }
+    .galeria img{
+        height: 80%;
+    }
+    .galeria img:hover{
+        width: 70%;
+        
+    }
+}
+
+
+
+.sectionRegistrar{
+
+    background-image: linear-gradient(to top, #000000, #8867aa, #9296f9);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+     .fieldset{
+        flex: 1; 
+        margin-right: 10px; 
+        border: 5px solid var(--secondary-color);
+        padding: 30px;
+        width: 500px;
+        justify-content: space-between;
+
+        div{
+            margin: 7px;
+            input {
+                padding: 5px;
+                margin: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                width: 50%;
+                background-color: rgb(237, 247, 250);
+            }
+        }
+
+        .ayuda{ 
+            color: var(--secondary-color);
+        }
+
+        .ayuda:hover{
+            color: var(--main-color);
+        }
+
+        .button{
+            padding: 8px 12px;
+            background-color:#9296f9;
+            color:var(--third-color);
+            border:2px solid var(--secondary-color);
+            border-radius: 4px;
+            margin-left: 8px;
+            cursor: pointer;
+            margin-bottom: 30px;
+            font-size: medium;
+            
+        }
+        .button:hover {
+            color:white;
+          }
+          .terminos{
+            display: flex;
+            text-align: center;
+
+            
+        }
+
+    }
+
+}
+
+.contenedorDetalle{
+    display: flex;
+    height: 500px;
+    background-image: linear-gradient(to top, #000000, #4e4f6158), url(../img/dune-parte-dos-2024-3275678.jpg);
+    background-size: cover;
+    background-position: center top  ;
+    .imgDetalle{
+        height: 100%;
+        padding: 25px;
+        img{
+            height: 100%;
+        }       
+    }
+    .textoDetalle{
+        margin: 20px;
+        .contenedorCreditos{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+        }
+        h2{
+            margin-top: 20px;
+        }
+    }
+}
+.trailer{
+    margin: 10px;
+    padding: 20px;
+    opacity: 0; /* Inicialmente ocultar los contenedores */
+    transition: opacity 0.5s ease-in-out;
+    
+    h2{
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s;
+        width: 100%;
+    }
+    
+    .contenedorTrailer{
+        display:inline-block;
+        
+        padding: 20px;
+    }
+    .contenedorInfo{
+        position: absolute;
+        padding:30px;
+        
+        display: inline-block;
+        margin: 10px;
+        a:hover{
+            color: var(--main-color);
+        }
+        a{
+            color: var(--third-color-t);
+        }
+        .info{
+            padding: 20px;
+            td{
+                padding-left: 3px;
+            }
+        }
+    }
+}
+
+.trailer:nth-child(2) {
+    animation: fadeIn 0.5s ease-in-out forwards 1s;
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+ 

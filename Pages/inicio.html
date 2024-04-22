@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" href="../img/1-01.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Registrarse</title>
+</head>
+<body>
+    
+    <header class="header">
+            <nav>
+                <a href="../Pages/index.html" class="logo">
+                    <img src="..//img/4-04.png" alt="logo de la pagina">
+                </a>        
+                <ul>
+                    <a href="" class="nav-link">Películas</a>
+                    <a href="" class="nav-link">Series</a> 
+                    <a href="" class="nav-link">Búsqueda</a>
+                    <a href="" class="nav-link" id="InicioSesion">Iniciar Sesión</a>         
+                </ul>
+            </nav> 
+    </header>
+
+    <main id="main" class="main">
+        <section class="sectionRegistrar">
+                
+                <form action="" method="get">
+                    <h1>Registrate</h1>
+                    <fieldset class="fieldset">
+                        <div>
+                                <div><h3>Tu nombre</h3></div>
+                                <input type="text"  name="nombre"  id="nombre"  placeholder="Nombre"required> 
+                        </div>
+                        <div>
+                                <div><h3>Tu email</h3></div>
+                                <input type="email" name="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div>
+                                <div><h3>Elige una contraseña</h3></div>
+                                <input type="password" name="password" id="password" placeholder="Al menos 8 caracteres" required>
+                        </div>
+                        <div>
+                                <div><h3>Tu fecha de nacimiento</h3></div>
+                                <input type="date" name="nacimiento" id="nacimiento" required>
+                        </div>
+                        <div class="terminos">
+                            <input class="check" type="checkbox" id="terminos">
+                            <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
+                            <div class="error-text"></div>
+                        </div>
+                        <div>
+                            <input class="button" type="submit" value="Registrarse">
+                        </div>
+                        
+                        
+                        <div>
+                            <a class="ayuda" href="#">Necesitas ayuda?</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </section>
+        <hr>
+    </main>
+
+    
+    <footer class="footer">
+        <div>
+            <dl >
+                <dt><a href="">Términos y condiciones</a></dt>
+                <dt><a href="">Preguntas frecuentes</a></dt>
+                <dt><a href="">Ayuda</a></dt>
+                <dt><a href="">Administrador Peliculas</a></dt>
+            </dl> 
+        </div>
+        <div>
+            <a href="#main">
+                <img src="../img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+            </a>
+        </div>
+        
+    </footer> 
+</body>
+</html>
