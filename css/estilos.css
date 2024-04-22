@@ -366,7 +366,7 @@ header,footer{
         .info{
             padding: 20px;
             td{
-                padding-left: 3px;
+                padding-left: 5px;   
             }
         }
     }
