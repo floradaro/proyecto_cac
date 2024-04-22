@@ -97,7 +97,7 @@ header,footer{
 }
 .sectionTitulos{
     height: 85vh;
-    background:linear-gradient(to bottom, #000000a3, #00000073),url("./assets/img/fondo.jpg");
+    background:linear-gradient(to bottom, #000000a3, #00000073),url("../assets/img/fondo.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
