@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
 </head>
 <body>
+    <main id="mainDetalle" class="mainDetalle">
     <header class="header">
         <nav>
             <a href="../index.html" class="logo">
@@ -25,7 +27,7 @@
         </nav> 
 </header>
 
-<main id="mainDetalle" class="mainDetalle">
+
     <section class="detalle">
       <div class="contenedorDetalle" >
           <div class="imgDetalle">
@@ -58,7 +60,7 @@
 
     </section>
 
-    <section class="trailer">
+    <section class="trailer" data-aos="fade-up">
         <h2>Ver trailer</h2>
       <div class="contenedorTrailer">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/esezQhsrix0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
@@ -120,6 +122,11 @@
     </div>
     
 </footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+</script> 
     
 </body>
 </html>
