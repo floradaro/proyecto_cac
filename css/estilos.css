@@ -281,54 +281,62 @@ header,footer{
     background-image: linear-gradient(to top, #000000, #4e4f6158), url(../assets/img/dune-parte-dos-2024-3275678.jpg);
     background-size: cover;
     background-position: center top  ;
-    .imgDetalle{
-        height: 100%;
-        padding: 25px;
-        img{
-            height: 100%;
-        }       
-    }
-    .textoDetalle{
-        margin: 20px;
-        .contenedorCreditos{
-            margin-top: 20px;
-            margin-bottom: 20px;
-            
-        }
-        h2{
-            margin-top: 20px;
-        }
-    }
+
 }
+    .contenedorDetalle .contenedorCreditos{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+
+    .contenedorDetalle h2{
+        margin-top: 20px;
+    }
+
+    .contenedorDetalle .textoDetalle{
+        margin: 20px;
+    }
+    
+    .contenedorDetalle .imgDetalle{
+        height: 100%;
+        padding: 25px;     
+    }
+    
+    .contenedorDetalle img{
+        height: 100%;
+    }
+
 .trailer{
     margin: 10px;
-    padding: 20px;
-    
-    .contenedorTrailer{
-        display:inline-block;
-        padding: 20px;
-    }
-    .contenedorInfo{
-        
-        position: absolute;
-        padding:30px;
-        display: inline-block;
-        margin: 10px;
-        a:hover{
-            color: var(--main-color);
-        }
-        a{
-            color: var(--third-color-t);
-        }
-        .info{
-            
-            padding: 20px;
-            td{
-                padding-left: 5px;   
-            }
-        }
-    }
+    padding: 20px;     
 }
+
+.trailer .contenedorInfo{
+    position: absolute;
+    padding:30px;
+    display: inline-block;
+    margin: 10px;
+}
+.trailer .contenedorTrailer{
+    display:inline-block;
+    padding: 20px;
+}
+.trailer a{
+    color: var(--third-color-t);
+        }
+
+.trailer a:hover{
+    color: var(--main-color);
+        }
+
+
+.trailer td{
+    padding-left: 5px;   
+}
+
+
+
+
 
 /*Estilos del footer*/
 
@@ -340,25 +348,27 @@ header,footer{
     text-align: center; /*centraria cada contenedor verticalmente*/
     background-color: var(--secondary-color);
     
-    a{
-        color: var(--third-color);
-        text-decoration: none;
-        margin-right: 10px;
-    }
-    a:hover{
-        color: white;
-    }
+}
 
-    div{
-        margin-left: auto;
-    }
+.footer a{
+    color: var(--third-color);
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer a:hover{
+    color: white;
+}
+
+.footer div{
+    margin-left: auto;
 }
 
 /*media query*/
 
 /*Estilos previos al @media*/  
 
-  @media screen and (max-width: 390px) {
+  /*@media screen and (max-width: 390px) {
    
     .header nav{
         margin-top: 2vh;
@@ -378,7 +388,7 @@ header,footer{
     }
 
     .header .logo img {
-        max-width: 80%; /* Cambia esto al ancho máximo deseado en píxeles */
+        max-width: 80%; 
         height: auto;
         margin-bottom: 5px;
 
@@ -402,7 +412,7 @@ header,footer{
     }
     
    .galeriaTendencias div{
-        margin-top: 10px; /* Margen superior */
+        margin-top: 10px; 
         margin-bottom: 10px;
    }
 
@@ -412,20 +422,6 @@ header,footer{
         justify-content: center;
         
    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      
     .contenedorDetalle {
       flex-direction: column;
@@ -438,108 +434,173 @@ header,footer{
         display: block;
     }
 
-  
-    .trailer {
-       
-        height: 90vh;
+  .trailer {
+        height: 60vh;
+        align-items: center;
+    }
 
-        .contenedorTrailer{
-            display: flex;
-            padding: 0.2vh;
-        }
+    .contenedorTrailer iframe{
+        align-items: center;
+        width: 100%;
+        height: auto;
+
+    }
+    .trailer .contenedorInfo{
+        text-align: center;
+        
+    }
+
+    .redes{
+        padding-bottom: 3vh;
+    }
+   
+    .trailer .info{
+        padding: 0px;
     }
   
-    .footer{
-        display: flex; /* Convertir el footer en un contenedor de flexbox */
+    footer{
+        display: flex; 
         justify-content: space-between;
         width: 100%;
         font-size: 2vh;
-        div{
-            display: inline-flex; /* Hacer que el div sea un contenedor de flexbox en línea */
-            justify-content: flex-end;
-        }
+        align-items: center;
     }
-  }
 
-  @media screen and (max-width: 768px) {
+    .footer div{
+        display: inline-flex; 
+        justify-content: flex-end;
+    }
+
+    .footer img{
+        display: none;
+    }
+
+  }*/
+
    
-    .header {
-        height: auto;
-        padding: 10px;
-        text-align: center;
-
-        nav{
-            flex-direction:row;
-            align-items: center;
-
-            .logo{
-                margin-bottom: 10px;
-            }
-
-            ul{
-                flex-direction: column;
-
-                a{
-                    margin-bottom: 10px;
-                }
-            }
-        }
-      }
-
-    .sectionTitulos .contenedorTitulos {
-        h1{font-size: 5vh};
-        h2{font-size: 4vh};
-        padding: 5vh;
-        width: 90%;
-      }
-  
-    .busqueda {
-        h2{font-size: 3vh;}
-        form {
-            width: 90%;
-          }
+  @media screen and (max-width: 768px) {/*este estuviste trabajando*/
+   
+    .header{
+         height: auto;
+         text-align: center;
+       }
+ 
+     .header nav ul{
+         flex-direction: column;
+     }
+     .header nav a{
+         margin-bottom: 10px;
+         color: var(--secondary-color);
+         text-decoration: none;
+         font-size: 3vh;
+     }
+ 
+     .header .logo img {
+         max-width: 70%; 
+         height: auto;
+         margin-bottom: 5px;
+ 
+     }
+ 
+     .sectionTitulos .contenedorTitulos h1{
+         font-size: 5vh;
+     }
+ 
+     .sectionTitulos .contenedorTitulos h2{
+         font-size: 3vh;
+     }
+   
+     .busqueda h2{
+         font-size: 3vh;
+         text-align: center;
+         margin-right: 2vh;
+     }
+ 
+     .busqueda input[type="text"] {
+         width: auto;
+     }
+ 
+     
+     
+    .galeriaTendencias div{
+         margin-top: 10px; 
+         margin-bottom: 10px;
     }
+ 
     
-   .galeriaTendencias div{
-        margin-top: 10px; /* Margen superior */
-        margin-bottom: 10px;
+    
+     .contenedorDetalle {
+       flex-direction: column;
+       height: auto;
+     
+     }
+ 
+     .contenedorDetalle .textoDetalle h1{
+         font-size: 4vh;
+         text-align: center;
+     }
+ 
+     .contenedorDetalle img{
+         width: 90%;
+         margin: 0 auto;
+         display: block;
+     }
+     .textoDetalle{
+         padding: 2vh;
+     }  
+     .trailer {
+         height: 70vh;
+         align-items: center;
+
+     }
+ 
+     .contenedorTrailer iframe{
+         align-items: center;
+         width: 100%;
+         height: auto;
+         
+ 
+     }
+
+     .trailer .contenedorInfo{
+        display: block;
+        text-align: center;
+        align-items: center;
+        padding-top: 2vh;
+
+     }
+
+     .redes{
+        justify-content: center;
+         padding-bottom: 3vh;
+
+     }
+    
+     .info{
+         padding: 20px;
+     }
+ 
+     .footer{
+         display: flex; 
+         width: 100%;
+         font-size: 2vh;
+         align-items: center;
+      
+
+     }
+ 
+     .footer div{
+         display: inline-flex; 
+         justify-content:center;
+
+     }
+
+     .footer img{
+        display: none;
+     }
+ 
+     
    }
    
-  
-    .contenedorDetalle {
-      flex-direction: column;
-      height: auto;
-      img{
-        width: 90%;
-        margin: 0 auto;
-        display: block;
-      }
-
-      .textoDetalle{
-        h1{font-size: 4vh};
-      }
-    }
-  
-    .trailer {
-       
-        height: 90vh;
-
-        .contenedorTrailer{
-            display: flex;
-            padding: 0.2vh;
-        }
-    }
-  
-    .footer{
-        display: flex; /* Convertir el footer en un contenedor de flexbox */
-        justify-content: space-between;
-        width: 100%;
-        font-size: 2vh;
-        div{
-            display: inline-flex; 
-            justify-content: flex-end;
-        }
-
-    }
-  }
+   
   
