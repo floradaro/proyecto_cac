@@ -637,3 +637,37 @@ header,footer{
     
   
 }
+
+@media screen and (width<= 568px){
+    .header{
+        height: 50%;
+        text-align: center;
+      }
+
+      .header nav ul{
+        justify-content:space-around;
+        align-items: center;
+        
+        a{
+            font-size: 1rem;
+        }
+
+        h1{
+            font-size: 1rem;
+        }
+        h2{
+            font-size:1rem;
+        }
+
+    }
+
+    .sectionTitulos{
+        height: 50vh;
+        .contenedorTitulos{
+            a{
+                font-size: 1rem;
+                margin-top: 10px;
+            }
+        }
+    }
+}
