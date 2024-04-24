@@ -30,6 +30,8 @@ h2{
     font-weight: 700;
     margin-bottom: 20px;
 }
+
+
 header,footer{
     background-color: var(--third-color);
     color: var(--main-color);
@@ -278,9 +280,10 @@ header,footer{
 .contenedorDetalle{
     display: flex;
     height: 500px;
-    background-image: linear-gradient(to top, #000000, #4e4f6158), url(../assets/img/dune-parte-dos-2024-3275678.jpg);
+    background-image: linear-gradient(to top, #000000fb, #4e4f6158), url(../assets/img/dune-parte-dos-2024-3275678.jpg);
     background-size: cover;
-    background-position: center top  ;
+    background-position: center top ;
+
 
 }
     .contenedorDetalle .contenedorCreditos{
@@ -308,18 +311,26 @@ header,footer{
 
 .trailer{
     margin: 10px;
-    padding: 20px;     
+    padding: 20px;    
+    
 }
 
 .trailer .contenedorInfo{
     position: absolute;
-    padding:30px;
     display: inline-block;
-    margin: 10px;
+    margin-top: 80px;
+
+
+
 }
+.trailer .contenedorInfo .redes a{
+    padding: 20px;
+}
+
 .trailer .contenedorTrailer{
     display:inline-block;
     padding: 20px;
+    margin-right: 50px;
 }
 .trailer a{
     color: var(--third-color-t);
@@ -329,14 +340,10 @@ header,footer{
     color: var(--main-color);
         }
 
-
-.trailer td{
-    padding-left: 5px;   
+.trailer table{
+    border-collapse: separate;
+    border-spacing: 10px;
 }
-
-
-
-
 
 /*Estilos del footer*/
 
@@ -367,119 +374,9 @@ header,footer{
 /*media query*/
 
 /*Estilos previos al @media*/  
-
-  /*@media screen and (max-width: 390px) {
-   
-    .header nav{
-        margin-top: 2vh;
-        flex-direction:row;
-        align-items: center;
-        margin-right: 2vh;
-    }
-
-    .header nav ul{
-        flex-direction: column;
-    }
-    .header nav a{
-        margin-bottom: 10px;
-        color: var(--secondary-color);
-        text-decoration: none;
-        font-size: 3vh;
-    }
-
-    .header .logo img {
-        max-width: 80%; 
-        height: auto;
-        margin-bottom: 5px;
-
-    }
-
-    .sectionTitulos .contenedorTitulos h1{
-        font-size: 5vh;
-    }
-
-    .sectionTitulos .contenedorTitulos h2{
-        font-size: 3vh;
-    }
-  
-    .busqueda h2{
-        font-size: 4vh;
-        text-align: center;
-        margin-right: 2vh;
-    }
-    .busqueda input[type="text"] {
-        width: auto;
-    }
-    
-   .galeriaTendencias div{
-        margin-top: 10px; 
-        margin-bottom: 10px;
-   }
-
-   .peliculasTendencias img{
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        
-   }
-     
-    .contenedorDetalle {
-      flex-direction: column;
-      height: auto;
-
-    }
-    .contenedorDetalle img{
-        width: 90%;
-        margin: 0 auto;
-        display: block;
-    }
-
-  .trailer {
-        height: 60vh;
-        align-items: center;
-    }
-
-    .contenedorTrailer iframe{
-        align-items: center;
-        width: 100%;
-        height: auto;
-
-    }
-    .trailer .contenedorInfo{
-        text-align: center;
-        
-    }
-
-    .redes{
-        padding-bottom: 3vh;
-    }
-   
-    .trailer .info{
-        padding: 0px;
-    }
-  
-    footer{
-        display: flex; 
-        justify-content: space-between;
-        width: 100%;
-        font-size: 2vh;
-        align-items: center;
-    }
-
-    .footer div{
-        display: inline-flex; 
-        justify-content: flex-end;
-    }
-
-    .footer img{
-        display: none;
-    }
-
-  }*/
-
-   
-  @media screen and (max-width: 768px) {/*este estuviste trabajando*/
-   
+ 
+  /*@media screen and (max-width: 768px) {/*este estuviste trabajando*/
+  /* 
     .header{
          height: auto;
          text-align: center;
@@ -551,7 +448,6 @@ header,footer{
      .trailer {
          height: 70vh;
          align-items: center;
-
      }
  
      .contenedorTrailer iframe{
@@ -600,7 +496,110 @@ header,footer{
      }
  
      
-   }
+   }*/
    
+   /*segunda prueba desde 0 a 768 px y ser una pantalla. Nueva sintaxis */
+   @media screen and (width<= 992px){
+
+    h1{
+        font-size: 1.7rem;
+    }
+    h2{
+        font-size:1.3rem;
+    }
    
+    .header{
+        height: initial;
+        nav{
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        
+    }
+
+    .sectionTitulos{
+        height: 75vh;
+        .contenedorTitulos{
+            a{
+                font-size: 1.3rem;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .busqueda{
+        height: 300px;
+
+        form{
+            width: 90%;
+        }
+        
+    }
+
+    .footer{
+        div{
+            display: inline-flex; 
+         justify-content:center;
+        }
+
+    }
+
+    .detalle{
+        display: block; /*blocl*/
+    }
+    
+    .contenedorDetalle {
+        display: inline-block; /*inline*/
+        height: 400px;
+    }
+    
+    .contenedorDetalle .imgDetalle img {
+        height: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .textoDetalle{
+        padding-top: 0px;
+    }
+    
+    
+    .contenedorDetalle .textoDetalle h1 {
+        text-align: center;
+    }
+
+    .trailer {
+        height: 80vh;
+        margin-top: 0px;
+        }
+
+
+    .trailer .contenedorTrailer{
+        display: flex;
+        margin: 0 auto;
+        padding: 5px;
+
+
+    }
+    
+    .trailer .contenedorTrailer iframe {
+        height: auto;
+    }
+    
+    .trailer .contenedorInfo {
+        flex-direction: column;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        
+    }
+    
+    .trailer .contenedorInfo .redes {
+ 
+        padding-bottom: 3vh;
+    }
+    
   
+}
