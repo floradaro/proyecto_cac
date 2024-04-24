@@ -519,7 +519,7 @@ header,footer{
     */
 
     .header{
-        height: initial;
+        height: 50%;
         text-align: center;
       }
 
@@ -529,8 +529,8 @@ header,footer{
         
     }
     
-    .header .logo img {
-        width: 50%; 
+    .header .logo img{
+        width: 10%; 
         height: auto;
         margin-bottom: 5px;
     }
