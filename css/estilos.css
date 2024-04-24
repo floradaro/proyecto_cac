@@ -499,7 +499,7 @@ header,footer{
    }*/
    
    /*segunda prueba desde 0 a 768 px y ser una pantalla. Nueva sintaxis */
-   @media screen and (width<= 992px){
+   @media screen and (width<= 768px){
 
     h1{
         font-size: 1.7rem;
@@ -530,7 +530,7 @@ header,footer{
     }
     
     .header .logo img{
-        width: 10%; 
+        width: 50%; /*modifique aca*/
         height: auto;
         margin-bottom: 5px;
     }
