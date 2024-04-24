@@ -514,8 +514,18 @@ header,footer{
             flex-direction: column;
             row-gap: 10px;
         }
+
         
+
     }
+
+    .header nav a .logo img{
+        max-width: 30%;                
+                     height: auto;
+                    margin-bottom: 5px
+    }
+    
+    
 
     .sectionTitulos{
         height: 75vh;
@@ -569,7 +579,7 @@ header,footer{
     }
 
     .trailer {
-        height: 80vh;
+        height: 100vh;
         margin-top: 0px;
         }
 
