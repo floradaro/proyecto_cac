@@ -530,7 +530,7 @@ header,footer{
     }
     
     .header .logo img{
-        width: 50%; /*modifique aca*/
+        width: 60%; /*modifique aca*/
         height: auto;
         margin-bottom: 5px;
     }
