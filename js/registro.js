@@ -26,16 +26,23 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         resetErrorMessages();
         let username = document.getElementById("username").value.trim();
+        let lastname = document.getElementById("lastname").value.trim();
         let email = document.getElementById("email").value.trim();
         let password = document.getElementById("password").value.trim();
         let nacimiento = document.getElementById("nacimiento").value.trim();
+        let terminos = document.getElementById('terminos').checked;
         let isValid = true;
 
         if (username === "") {
-            displayErrorMessage("usenameError", "Por favor ingrese un usuario.");
+            displayErrorMessage("usenameError", "Por favor ingrese un  nombre.");
             isValid = false;
         }
 
+        if (lastname === "") {
+            displayErrorMessage("lastnameError", "Por favor ingrese un apellido.");
+            isValid = false;
+        }
+        
         if (!isValidEmail(email)) {
             displayErrorMessage("emailError", "Por favor ingrese un correo electrónico válido.");
             isValid = false;
@@ -48,6 +55,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         if(nacimiento === ""){
             displayErrorMessage("nacimientoError", "Por favor ingrese una fecha de nacimiento.");
+            isValid = false;
+        }
+
+        if(!terminos){
+            displayErrorMessage("terminosError", 'Debes aceptar los términos y condiciones');
             isValid = false;
         }
 
