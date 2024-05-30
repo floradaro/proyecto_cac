@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="icon" href="../1-01.ico" type="image/x-icon">
-    <script src="../js/inicio.js"></script>
+    <script src="../js/registro.js"></script>
     <title>Registrarse</title>
 </head>
 <body>
@@ -25,38 +25,44 @@
 </header>
 
     
-        <section class="sectionInicio">
+        <section class="sectionRegistrar">
                 
                 <form id="loginForm" action="" method="get">
-                    <h1>Inicio Sesion</h1>
+                    <h1>Registrate</h1>
                     <fieldset class="fieldset">
                         <div>
-                            <div><h3>Ingresa tu nombre</h3></div>
-                            <input type="text"  name="nombre"  id="username"  placeholder="Nombre"> 
-                            <div id="usenameError" class="error-message"></div>
+                                <div><h3>Tu nombre</h3></div>
+                                <input type="text"  name="nombre"  id="username"  placeholder="Nombre"> 
+                                <div id="usenameError" class="error-message"></div>
                         </div>
                         <div>
-                                <div><h3>Ingresa tu email</h3></div>
+                                <div><h3>Tu email</h3></div>
                                 <input type="email" name="email" id="email" placeholder="Email" >
                                 <div id="emailError" class="error-message"></div>
                         </div>
                         <div>
-                                <div><h3>Ingresa tu contraseña</h3></div>
+                                <div><h3>Elige una contraseña</h3></div>
                                 <input type="password" name="password" id="password" placeholder="Al menos 8 caracteres" >
                                 <div id="passwordError" class="error-message"></div>
                         </div>
+                        <div>
+                                <div><h3>Tu fecha de nacimiento</h3></div>
+                                <input type="date" name="nacimiento" id="nacimiento" >
+                                <div id="nacimientoError" class="error-message"></div>
+                        </div>
                         <div class="terminos">
-                            
+                            <input class="check" type="checkbox" id="terminos">
+                            <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
                             <div class="error-text"></div>
                         </div>
                         <div>
-                            <input class="button" type="submit" value="Ingresar" onclick="">
+                            <input class="button" type="submit" value="Registrarse" onclick="">
                         </div>
                         
                         
                         <div>
                             <a class="ayuda" href="#">Necesitas ayuda?</a>
-                            <a href="./registro.html" class="ayuda">Registrate</a>
+                            
                         </div>
                     </fieldset>
                 </form>
@@ -81,6 +87,6 @@
         
     </footer> 
 
-    <script src="../js/inicio.js"></script>
+    <script src="../js/registro.js"></script>
 </body>
 </html>
