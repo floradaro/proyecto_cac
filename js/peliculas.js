@@ -1,5 +1,4 @@
-
-
+console.log('Script cargado');
 document.addEventListener('DOMContentLoaded', () => {
     const API_SERVER = 'https://api.themoviedb.org/3';
     const options = {
@@ -18,23 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const data = await response.json(); 
             const movies = data.results;
-
-
+            console.log(movies);
             const peliculasSection = document.getElementById('peliculasSection');
-            const contenedorAncho = peliculasSection.clientWidth;
+            peliculasSection.innerHTML = '';
 
-
-            const anchoPelicula = 250; 
-
-
-            const peliculasPorFila = Math.floor(contenedorAncho / anchoPelicula);
-
-
-            const cantidadPeliculas = peliculasPorFila * 2;
-
-
-            peliculasSection.innerHTML = ''; 
-            movies.slice(0, cantidadPeliculas).forEach(movie => {
+            movies.forEach(movie => {
                 const ancla = document.createElement('a');
                 ancla.href = './pages/detalle.html';
                 const pelicula = document.createElement('div');
@@ -45,12 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
                 img.alt = movie.title;
                 img.loading = 'lazy';
+              
 
                 ancla.appendChild(pelicula);
                 pelicula.appendChild(img);
+                
+                
                 peliculasSection.appendChild(ancla);
             });
-
 
             peliculasSection.setAttribute('data-page', page);
         } catch (error) {
@@ -58,14 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    
     const buttonCargar = document.getElementById('buttonCargar');
     const botonAnterior = document.getElementById('botonAnterior');
     const botonSiguiente = document.getElementById('botonSiguiente');
     const peliculasSection = document.getElementById('peliculasSection');
-
+    
+    
     if (buttonCargar) {
-        buttonCargar.addEventListener('click', cargarPeliculasTendencia);
+        buttonCargar.addEventListener('click', () => {
+            cargarPeliculasTendencia();
+            
+        });
     }
+
 
     if (botonAnterior) {
         botonAnterior.addEventListener('click', () => {
@@ -82,11 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     cargarPeliculasTendencia();
 });
 
 
-window.addEventListener('resize', () => {
-    cargarPeliculasTendencia();
-});
+
+
+
