@@ -184,8 +184,6 @@ header,footer{
     object-fit: cover;
     border-radius: 5px;
     
-    
-
     /*animacion*/
     flex-grow: 1;
     opacity: 0.9;
@@ -194,10 +192,9 @@ header,footer{
 }
 
 .peliculasTendencias img:hover{
-    width: 105%; /* Aumenta ligeramente el tamaño de la imagen */
-    opacity: 1; /* Aumenta la opacidad */
-    transform: scale(1.07) translate(-3%, -3%);
-        }
+    transform: scale(1.07);
+        opacity: 1;
+    }
 
 .peliculasTendencias .galeriaTendencias div{
     width: 250px;
@@ -223,7 +220,73 @@ header,footer{
     color: var(--main-color);
 }
 
-/*Pagina REgistrarse*/
+button{
+    padding: 8px 12px;
+    background-color:var(--secondary-color);
+    color:var(--third-color);
+    border:none;
+    border-radius: 4px;
+    margin-left: 8px;
+    margin-bottom: 30px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+button:hover{
+    color: var(--main-color);
+}
+
+/*Lista de peliculas*/
+
+.contenedorPeliculasLista{
+    width: 100%;
+    margin:0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.peliculasSection{
+    display:flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+
+    }
+    .pelicula {
+        width: 250px;
+        height: 350px;
+        display: inline-flex;
+        margin: 45px;
+        box-shadow: 10px 10px 47px -6px rgba(255, 255, 255, 0.135);
+        border-radius: 5px;
+        margin-top: 20px;
+
+    }
+    
+    .imgTendencia {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        transition: transform 0.3s ease, opacity 0.5s ease;
+        opacity: 0.9;
+    }
+    
+    .pelicula:hover .imgTendencia {
+        transform: scale(1.07);
+        opacity: 1;
+    }
+    
+   
+
+
+
+
+
+
+/*Pagina Inicio Sesion*/
 .sectionInicio{
     background-image: linear-gradient(to top, #000000, #8867aa, #9296f9);
     display: flex;
@@ -289,6 +352,8 @@ header,footer{
           
     }
 }
+
+/*Pagina Registrarse*/
 .sectionRegistrar{
 
     background-image: linear-gradient(to top, #000000, #8867aa, #9296f9);
@@ -370,7 +435,6 @@ header,footer{
     background-size: cover;
     background-position: center top ;
 
-
 }
     .contenedorDetalle .contenedorCreditos{
         margin-top: 20px;
@@ -398,16 +462,12 @@ header,footer{
 .trailer{
     margin: 10px;
     padding: 20px;   
-    
 }
 
 .trailer .contenedorInfo{
     position: absolute;
     display: inline-block;
     margin-top: 80px;
-
-
-
 }
 .trailer .contenedorInfo .redes a{
     padding: 20px;
