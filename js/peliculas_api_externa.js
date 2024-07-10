@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json(); 
-            const movies = data.results;
+            const movies = data.results.slice(0, 12); // Tomar solo 3 películas por página
             console.log(movies);
             const peliculasSection = document.getElementById('peliculasSection');
             peliculasSection.innerHTML = '';
@@ -33,11 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.alt = movie.title;
                 img.loading = 'lazy';
               
-
                 ancla.appendChild(pelicula);
                 pelicula.appendChild(img);
-                
-                
                 peliculasSection.appendChild(ancla);
             });
 
@@ -47,21 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    
-    const buttonCargar = document.getElementById('buttonCargar');
     const botonAnterior = document.getElementById('botonAnterior');
     const botonSiguiente = document.getElementById('botonSiguiente');
     const peliculasSection = document.getElementById('peliculasSection');
     
-    
-    if (buttonCargar) {
-        buttonCargar.addEventListener('click', () => {
-            cargarPeliculasTendencia();
-            
-        });
-    }
-
-
     if (botonAnterior) {
         botonAnterior.addEventListener('click', () => {
             let currentPage = Number(peliculasSection.getAttribute('data-page'));
@@ -79,8 +65,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cargarPeliculasTendencia();
 });
-
-
-
-
-
