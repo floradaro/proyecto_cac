@@ -24,15 +24,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
         resetErrorMessages();
-        let username = document.getElementById("username").value.trim();
         let email = document.getElementById("email").value.trim();
         let password = document.getElementById("password").value.trim();
         let isValid = true;
-
-        if (username === "") {
-            displayErrorMessage("usenameError", "Por favor ingrese un usuario.");
-            isValid = false;
-        }
 
         if (!isValidEmail(email)) {
             displayErrorMessage("emailError", "Por favor ingrese un correo electrónico válido.");

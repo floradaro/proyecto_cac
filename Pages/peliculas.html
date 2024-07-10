@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+    <link rel="icon" href="../1-01.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <main id="main">
+        <header class="header" id="header">
+            <nav>
+                <a href="../index.html" class="logo">
+                    <img src="../assets/img/4-04.png" alt="logo de la pagina">
+                </a>
+                <ul>
+                    <a href="../Pages/peliculas.html" class="nav-link">Películas</a>
+                    <a href="" class="nav-link">Series</a>
+                    <a href="../Pages/inicio.html" class="nav-link">Iniciar Sesión</a>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="peliculas_api">
+            <h1>Lista de Peliculas</h1>
+            <hr>
+            <div class="contenedorPeliculasLista">
+                <section id="peliculasSection" class="row"></section>
+                <button id="botonAnterior">Anterior</button>
+                <button id="botonSiguiente">Siguiente</button>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <div>
+            <a href="">Términos y condiciones</a>
+            <a href="">Preguntas frecuentes</a>
+            <a href="">Ayuda</a>
+            <a href="./Pages/administrador.html" class="administrador">Administrador Peliculas</a>
+        </div>
+        <div>
+            <a href="#main">
+                <img src="../assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="../js/peliculas_api_interna_get.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,89 +10,92 @@
     <script src="../js/registro.js"></script>
     <title>Registrarse</title>
 </head>
-<body>
-<main id="main" class="main">
-    <header class="header">
-        <nav>
-            <a href="../index.html" class="logo">
-                <img src="../assets/img/4-04.png" alt="logo de la pagina">
-            </a>       
-            <ul>
-                <a href="" class="nav-link">Películas</a>
-                <a href="" class="nav-link">Series</a> 
-                <a href="./inicio.html" class="nav-link">Iniciar Sesión</a>         
-            </ul>
-        </nav> 
-</header>
 
-    
+<body>
+    <main id="main" class="main">
+        <header class="header">
+            <nav>
+                <a href="../index.html" class="logo">
+                    <img src="../assets/img/4-04.png" alt="logo de la pagina">
+                </a>
+                <ul>
+                    <a href="" class="nav-link">Películas</a>
+                    <a href="" class="nav-link">Series</a>
+                    <a href="./inicio.html" class="nav-link">Iniciar Sesión</a>
+                </ul>
+            </nav>
+        </header>
+
         <section class="sectionRegistrar">
-                
-                <form id="loginForm" action="" method="get">
-                    <h1>Registrate</h1>
-                    <fieldset class="fieldset">
-                        <div>
-                                <div><h3>Tu nombre</h3></div>
-                                <input type="text"  name="nombre"  id="username"  placeholder="Nombre"> 
-                                <div id="usenameError" class="error-message"></div>
-                        </div>
-                        <div>
-                                <div><h3>Tu apellido</h3></div>
+            <div>
+                <h1>Registrate</h1>
+                <h2>Únete a nuestra comunidad de cinéfilos y disfruta de beneficios exclusivos.</h2>
+            </div>
+            <form id="loginForm" action="" method="get">
+                <div class="fieldset">
+                        <div class="nombre-apellido">
+                            <div>
+                                <h3>Nombre</h3>
+                                <input type="text" name="nombre" id="username" placeholder="Nombre">
+                                <div id="usernameError" class="error-message"></div>
+                            </div>
+                            <div>
+                                <h3>Apellido</h3>
                                 <input type="text" name="apellido" id="lastname" placeholder="Apellido">
                                 <div id="lastnameError" class="error-message"></div>
+                            </div>
                         </div>
-                        <div>
-                                <div><h3>Tu email</h3></div>
-                                <input type="email" name="email" id="email" placeholder="Email" >
+                        <div >
+                            <div>
+                                <h3>Correo electrónico</h3>
+                                <input type="email" name="email" id="email" placeholder="ejemplo@email.com">
                                 <div id="emailError" class="error-message"></div>
-                        </div>
-                        <div>
-                                <div><h3>Elige una contraseña</h3></div>
-                                <input type="password" name="password" id="password" placeholder="Al menos 8 caracteres" >
+                            </div>
+                            <div>
+                                <h3>Contraseña</h3>
+                                <input type="password" name="password" id="password" placeholder="Al menos 8 caracteres">
                                 <div id="passwordError" class="error-message"></div>
-                        </div>
-                        <div>
-                                <div><h3>Tu fecha de nacimiento</h3></div>
-                                <input type="date" name="nacimiento" id="nacimiento" >
+                            </div>
+                            <div>
+                                <h3>Fecha de nacimiento</h3>
+                                <input type="date" name="nacimiento" id="nacimiento">
                                 <div id="nacimientoError" class="error-message"></div>
+                            </div>
                         </div>
                         <div class="terminos">
                             <input class="check" type="checkbox" id="terminos">
                             <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
-                            <div id="terminosError" class="error-message"></div>
+                            <div id="terminosError" class="error-message_ajustado"></div>
                         </div>
-                        <div>
-                            <input class="button" type="submit" value="Registrarse" onclick="">
+                        <div class="button_acomodar">
+                            <button type="submit">Registrarse</button>
                         </div>
                         
-                        
-                        <div>
-                            <a class="ayuda" href="#">Necesitas ayuda?</a>
-                            
-                        </div>
-                    </fieldset>
-                </form>
-            </section>
+                </div>
+                
+            </form>
+        </section>
         </section>
         <hr>
     </main>
 
-    
+
     <footer class="footer">
         <div>
             <a href="">Términos y condiciones</a>
             <a href="">Preguntas frecuentes</a>
             <a href="">Ayuda</a>
-            <a href="">Administrador Peliculas</a> 
+            <a href="">Administrador Peliculas</a>
         </div>
         <div>
             <a href="#main">
                 <img src="../assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
             </a>
         </div>
-        
-    </footer> 
+
+    </footer>
 
     <script src="../js/registro.js"></script>
 </body>
+
 </html>

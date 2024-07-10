@@ -3,26 +3,27 @@ function isValidEmail(email) {
     return emailPattern.test(email);
 }
 
-function displayErrorMessage (elementId, message){
+function displayErrorMessage(elementId, message) {
     let errorElement = document.getElementById(elementId);
-    errorElement.innerText = message;
+    if (errorElement) {
+        errorElement.innerText = message;
+    } else {
+        console.error(`Elemento con id '${elementId}' no encontrado.`);
+    }
 }
 
-function resetErrorMessages(){
+function resetErrorMessages() {
     let errorElements = document.querySelectorAll(".error-message");
-    errorElements.forEach((element)=> {
+    errorElements.forEach((element) => {
         element.innerText = "";
     });
 }
 
-
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("loginForm");
     console.log(form);
-    form.addEventListener("submit", (event)=>{
-
+    form.addEventListener("submit", (event) => {
         event.preventDefault();
-
 
         resetErrorMessages();
         let username = document.getElementById("username").value.trim();
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         let isValid = true;
 
         if (username === "") {
-            displayErrorMessage("usenameError", "Por favor ingrese un  nombre.");
+            displayErrorMessage("usernameError", "Por favor ingrese un nombre.");
             isValid = false;
         }
 
@@ -64,10 +65,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
 
         if (isValid) {
-
             alert("¡Te has registrado correctamente!");
-
         }
     });
-} );
-
+});
