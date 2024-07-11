@@ -257,7 +257,7 @@ header,footer{
 /*Pagina Inicio Sesion*/
 /*Pagina Registrarse*/
 .sectionRegistrar{
-    background-image: linear-gradient(to top, #000000, #8867aa, #9296f9);
+    background-image: linear-gradient(to top, #000000, #9296f0);
     padding: 30px;
 
     h1, h2{text-align: center;}
@@ -395,9 +395,17 @@ header,footer{
 .trailer .contenedorInfo{
     position: absolute;
     display: inline-block;
-    margin-top: 80px;
+    margin-top: 20px;
+
 }
-.trailer .contenedorInfo .redes a{
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.redes a{
     padding: 20px;
 }
 
@@ -425,6 +433,37 @@ header,footer{
     text-align: center;
 }
 
+.pelicula {
+    width: 250px;
+    height: 350px;
+    display: inline-flex;
+    margin: 45px;
+    box-shadow: 10px 10px 47px -6px rgba(255, 255, 255, 0.135);
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+.pelicula:hover .imgTendencia {
+    transform: scale(1.07);
+    opacity: 1;
+}
+
+.imgApi{
+    width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        transition: transform 0.3s ease, opacity 0.5s ease;
+        opacity: 0.9;
+}
+
+.pelicula:hover .imgApi {
+    transform: scale(1.07);
+    opacity: 1;
+}
+
+
 /*Pagina administrador*/
 
 .contenedor{
@@ -439,8 +478,8 @@ header,footer{
     display: grid;
     padding-bottom: 30px;
     padding-top: 30px;
-}
 
+}
 
 .form_adm {
     width: 100%;
@@ -469,7 +508,6 @@ header,footer{
 }
 
 .form_detalle{
-
     color: var(--fouth-color-t);    
 }
 
@@ -480,7 +518,7 @@ input[type=text], input[type=time], input[type=month], input[type=number], selec
 
 input[type=file]::file-selector-button {
     background: var(--secondary-color);
-    color: var(--main-color);
+    color: var(--third-color);
     height: 100%;
     border: none;
 
@@ -490,15 +528,38 @@ input[type=file]::file-selector-button {
     grid-column: 1/4;
 }
 
+
 .tabla_pelicula{
+    margin-top: 20px;
+    text-align: center;
     padding-top: 20px;
+
+    tbody th, td{
+        margin-top: 20px;
+        border-top: 1px solid var(--secondary-color);
+        padding: 10px;
+    }
 }
 
-tbody th, td{
-    margin-top: 20px;
-    border-top: 1px solid var(--seventh-color);
-    padding: 10px;
+.button{
+    padding: 5px ;
+    background-color:var(--secondary-color);
+    color:var(--third-color);
+    border:none;
+    border-radius: 4px;
+    font-size: medium;
+    cursor: pointer;
+
+
+
 }
+
+.button:hover{
+    color: var(--main-color);
+}
+
+
+
 
 /*Estilos del footer*/
 
@@ -644,6 +705,8 @@ tbody th, td{
         display: flex;
         align-items: center;
         justify-items: center;
+
+        
 
         
     }

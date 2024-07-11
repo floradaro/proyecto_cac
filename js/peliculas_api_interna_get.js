@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             'Content-Type': 'application/json'
         }
     };
-    const response = await fetch('http://localhost:8080/app/peliculas', options);
+    const response = await fetch('http://localhost:8080/apisimple/peliculas', options);
     const data = await response.json();
     console.log(data);
 
