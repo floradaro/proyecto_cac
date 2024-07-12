@@ -467,19 +467,15 @@ header,footer{
 /*Pagina administrador*/
 
 .contenedor{
-    width: 100%;
     background-image: linear-gradient(to top, #000000, #9296f0);
 }
 
 .contenedor_div{
-    width: 90%;
-    margin: auto;
     position: relative;
     display: grid;
-    padding-bottom: 30px;
-    padding-top: 30px;
-
+    padding: 40px;
 }
+
 
 .form_adm {
     width: 100%;
@@ -533,9 +529,9 @@ input[type=file]::file-selector-button {
     margin-top: 20px;
     text-align: center;
     padding-top: 20px;
+    width: 100%; 
 
-    tbody th, td{
-        margin-top: 20px;
+    tbody th,tbody td{
         border-top: 1px solid var(--secondary-color);
         padding: 10px;
     }
@@ -598,7 +594,7 @@ input[type=file]::file-selector-button {
     }
 
     .header{
-        height: 60%;
+
         text-align: center;
       }
 
@@ -610,7 +606,7 @@ input[type=file]::file-selector-button {
     }
     
     .header .logo img{
-        width: 50%; /*modifique aca*/
+        width: 40%; /*modifique aca*/
         height: auto;
         margin-bottom: 5px;
     }
@@ -630,7 +626,6 @@ input[type=file]::file-selector-button {
         }
     }
     
-
     .sectionTitulos{
         height: 75vh;
         .contenedorTitulos{
@@ -642,7 +637,8 @@ input[type=file]::file-selector-button {
     }
 
     .busqueda{
-        height: 300px;        
+        height: 80vh;
+        width: 100%;        
     }
 
     .busqueda form{
@@ -706,9 +702,6 @@ input[type=file]::file-selector-button {
         align-items: center;
         justify-items: center;
 
-        
-
-        
     }
     
     .trailer .contenedorInfo .redes {
@@ -737,4 +730,26 @@ input[type=file]::file-selector-button {
 .error{
     color: red;
     
+}
+
+@media screen and (max-width: 480px) {
+    .header .logo img {
+        width: 50%; /* Ajuste adicional para pantallas más pequeñas */
+    }
+
+    .busqueda {
+        padding: 50px;
+        padding-top: 100px; /* Ajuste de padding para pantallas muy pequeñas */
+   
+    }
+
+    .busqueda h2 {
+        font-size: 1.2rem; /* Ajuste adicional de fuente para pantallas muy pequeñas */
+    }
+
+    .busqueda form {
+        width: 100%; /* Mayor reducción del ancho del formulario */
+    }
+
+
 }

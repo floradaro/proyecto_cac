@@ -29,7 +29,6 @@
     <main id="mainDetalle" class="mainDetalle">
         <section class="contenedor">
             <div class="contenedor_div">
-
                 <h1>Gestión de peliculas</h1>
                 <p>En esta sección se podra llevar a cabo la gestión de las peliculas del portal</p>
 
@@ -40,7 +39,7 @@
                         <label for="titulo" class="form_detalle">Titulo</label>
                         <input class="form_grid" type="text" name="titulo" id="titulo">
                     </div>
-                    
+
 
                     <div>
                         <label for="genero" class="form_detalle">Genero</label>
@@ -59,28 +58,30 @@
                         <input class="button" type="submit" value="Grabar Pelicula">
                     </div>
                 </form>
-            </div>
+
         </section>
         <hr>
         <!--aca se van a mostrar las peliculas y las acciones modificar y dar de baja-->
-        <section class="contenedor_div">
-            <h1>Listado de Peliculas</h1>
-            <p>Para ver todos los datos de las peliculas, elija una y toque modificar</p>
-            <table class="tabla_pelicula" id="tablePeliculas">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Titulo</th>
-                        <th>Duracion</th>
-                        <th>Genero</th>
-                        <th>Imagen</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="bodyTablePeliculas">
-                    <!-- se va a llenar desde js-->
-                </tbody>
-            </table>
+        <section>
+            <div class="contenedor_div">
+                <h1>Listado de Peliculas</h1>
+                <p>Para ver todos los datos de las peliculas, elija una y toque modificar</p>
+                <table class="tabla_pelicula" id="tablePeliculas">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Titulo</th>
+                            <th>Duracion</th>
+                            <th>Genero</th>
+                            <th>Imagen</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTablePeliculas">
+                        <!-- se va a llenar desde js-->
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
 
@@ -99,7 +100,7 @@
 
     </footer>
 
-    
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();
     </script>
@@ -108,7 +109,7 @@
         crossorigin="anonymous"></script>
     <script src="../js/get_modificar_delete_peliculas.js"></script>
     <script src="../js/post_put_pelicula.js"></script>
-    
+
 </body>
 
 </html>
